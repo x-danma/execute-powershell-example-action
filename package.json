@@ -4,7 +4,7 @@
   "description": "An example github action to execute a powershell script contained in repo",
   "main": "index.js",
   "scripts": {
-    "build": "ncc build index.js --license licenses.txt",
+    "build": "ncc build index.ts --license licenses.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,8 @@
   "homepage": "https://github.com/x-danma/execute-powershell-example-action#readme",
   "dependencies": {
     "@actions/core": "^1.10.0",
-    "@actions/github": "^5.1.1"
+    "@actions/exec": "^1.1.1",
+    "@actions/github": "^5.1.1",
+    "typescript": "^4.8.4"
   }
 }
