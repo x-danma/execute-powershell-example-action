@@ -1,0 +1,13 @@
+name: 'Execute Powershell Example'
+description: 'Echoes Hello World! from PowerSHell'
+inputs:
+  who-to-greet:  # id of input
+    description: 'Who to greet'
+    required: true
+    default: 'World'
+outputs:
+  returnEcho: # id of output
+    description: 'the echoed string'
+runs:
+  using: 'node16'
+  main: 'index.js'

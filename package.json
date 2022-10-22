@@ -1,0 +1,24 @@
+{
+  "name": "execute-powershell-example-action",
+  "version": "1.0.0",
+  "description": "An example github action to execute a powershell script contained in repo",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/x-danma/execute-powershell-example-action.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/x-danma/execute-powershell-example-action/issues"
+  },
+  "homepage": "https://github.com/x-danma/execute-powershell-example-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}
