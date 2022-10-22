@@ -10,7 +10,7 @@
       "noUnusedLocals": true
     },
     "include": [
-      "src/index.ts"
+      "index.ts"
     ],
     "typeAcquisition": {
       "enable": true
