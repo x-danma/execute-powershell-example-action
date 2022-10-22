@@ -4,6 +4,7 @@
   "description": "An example github action to execute a powershell script contained in repo",
   "main": "index.js",
   "scripts": {
+    "build": "ncc build index.js --license licenses.txt",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
