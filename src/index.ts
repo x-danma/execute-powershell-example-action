@@ -14,5 +14,6 @@ try {
 
 
 } catch (error) {
+  console.log(`Catch error ${error}!`);
   core.setFailed(error.message);
 }

@@ -3977,6 +3977,7 @@ try {
     _actions_core__WEBPACK_IMPORTED_MODULE_0___default().setOutput("returnEcho", time);
 }
 catch (error) {
+    console.log(`Catch error ${error}!`);
     _actions_core__WEBPACK_IMPORTED_MODULE_0___default().setFailed(error.message);
 }
 
