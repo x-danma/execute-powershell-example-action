@@ -1,20 +1,19 @@
 {
     "compilerOptions": {
-      "target": "es2017",
-      "module": "esnext",
-      "outDir": "lib",
-      "alwaysStrict": true,
-      "moduleResolution": "node",
-      "noImplicitAny": false,
-      "esModuleInterop": true,
-      "noUnusedLocals": true
+        "target": "es2017",
+        "module": "esnext",
+        "outDir": "lib",
+        "alwaysStrict": true,
+        "moduleResolution": "node",
+        "noImplicitAny": false,
+        "esModuleInterop": true,
+        "noUnusedLocals": true
     },
     "include": [
-      "index.ts"
+        "index.ts"
     ],
     "typeAcquisition": {
-      "enable": true
+        "enable": true
     },
     "compileOnSave": true
-  }
-  
+}

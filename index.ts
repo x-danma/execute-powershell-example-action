@@ -1,4 +1,7 @@
-const core = require('@actions/core');
+import core from '@actions/core';
+import exec from '@actions/exec';
+
+await exec.exec('./example.ps1');
 try {
   // `who-to-greet` input defined in action metadata file
   const nameToGreet = core.getInput('who-to-greet') || 'World';
