@@ -16,4 +16,4 @@ jobs:
           who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
       - name: Get the output echo
-        run: echo "The echo was ${{ steps.hello.echoPowerShell.returnEcho }}"
+        run: echo "The echo was ${{ steps.hello.echoPowerShell.outputs.returnEcho }}"
