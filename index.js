@@ -6,10 +6,9 @@ try {
   const nameToGreet = core.getInput('who-to-greet');
   console.log(`Hello ${nameToGreet}!`);
   const time = (new Date()).toTimeString();
+  console.log(`time ${time}!`);
   core.setOutput("returnEcho", time);
   // Get the JSON webhook payload for the event that triggered the workflow
-  const payload = JSON.stringify(github.context.payload, undefined, 2)
-  console.log(`The event payload: ${payload}`);
 } catch (error) {
   core.setFailed(error.message);
 }
