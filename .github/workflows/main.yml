@@ -12,8 +12,6 @@ jobs:
       - name: Echo Powershell action step
         uses: ./ # Uses an action in the root directory
         id: echoPowerShell
-        with:
-          who-to-greet: 'Mona the Octocat'
       # Use the output from the `hello` step
       - name: Get the output echo
         run: echo "The echo was ${{ steps.hello.echoPowerShell.outputs.returnEcho }}"
