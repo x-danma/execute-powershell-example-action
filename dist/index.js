@@ -3971,21 +3971,8 @@ try {
     const nameToGreet = _actions_core__WEBPACK_IMPORTED_MODULE_0___default().getInput('who-to-greet') || 'World';
     console.log(`Hello ${nameToGreet}!`);
     const time = (new Date()).toTimeString();
-    let myOutput = '';
-    let myError = '';
-    const options = {};
-    options.listeners = {
-        stdout: (data) => {
-            myOutput += data.toString();
-        },
-        stderr: (data) => {
-            myError += data.toString();
-        }
-    };
-    options.cwd = './lib';
-    await _actions_exec__WEBPACK_IMPORTED_MODULE_1___default().exec('./example.ps1', null, options);
-    console.log(`myOutput ${myOutput}!`);
-    console.log(`myError ${myError}!`);
+    const output = await _actions_exec__WEBPACK_IMPORTED_MODULE_1___default().getExecOutput('./example.ps1');
+    console.log(`output ${output}!`);
     console.log(`time ${time}!`);
     _actions_core__WEBPACK_IMPORTED_MODULE_0___default().setOutput("returnEcho", time);
 }
