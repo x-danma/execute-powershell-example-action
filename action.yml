@@ -1,13 +1,25 @@
-name: 'Execute Powershell Example'
-description: 'Echoes Hello World! from PowerSHell'
+name: 'Increment SemVer Patch Version and Tag'
+description: 'Creates a new tag with increased patch version. Expects SemVer X.Y.Z'
+branding:
+  icon: 'play'
+  color: 'purple'
 inputs:
-  who-to-greet:  # id of input
-    description: 'Who to greet'
+  GITHUB_TOKEN:  # id of input
+    description: 'Github Token for authentication'
     required: true
-    default: 'World'
+  repositoryName: # id of input
+    description: 'Repository Name for tag lookup'
+    required: true
+  repositoryOwner: # id of input
+    description: 'owner of the repository'
+    required: true
+  sha: # id of input
+    description: 'sha id for tag creation'
+    required: true
+
 outputs:
-  returnEcho: # id of output
-    description: 'the echoed string'
+  newTag: # id of output
+    description: 'The new tag that was generated'
 runs:
   using: 'node16'
   main: 'dist/index.js'

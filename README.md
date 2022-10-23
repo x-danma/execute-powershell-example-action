@@ -1,22 +1,38 @@
-# execute-powershell-example-action
-An example github action to execute a powershell script contained in repo 
+# Increment SemVer Patch Version and Tag
+
+This action will increment the patch version from your previous tags and create a tag ref to your commit.
 
 ## Inputs
 
-### `who-to-greet`
+### `GITHUB_TOKEN`
 
-**Required** The name of the person to greet. Default `"World"`.
+**Required** Github Token for authentication.
+
+### `repositoryName`
+
+**Required** Repository Name for tag lookup.
+
+### `repositoryOwner`
+
+**Required** Repository Owner for tag lookup.
+
+### `sha`
+
+**Required** sha id for tag creation.
 
 ## Outputs
 
-### `returnEcho`
+### `newTag`
 
-the echoed string.
+The new Tag we created for you.
 
 ## Example usage
 
 ```yaml
-uses: actions/execute-powershell-example-action@0.0.1
+uses: actions/increment-semver-patch-and-tag-action@1.2.0
 with:
-  who-to-greet: 'Mona the Octocat'
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  repositoryName: ${{ github.event.repository.name }}
+  repositoryOwner: ${{ github.repository_owner }}
+  sha: ${{ github.sha }}
 ```
