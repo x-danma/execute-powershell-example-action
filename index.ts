@@ -8,6 +8,10 @@ try {
   const repositoryName = Core.getInput('repositoryName');
   const repositoryOwner = Core.getInput('repositoryOwner');
   // const sha = Core.getInput('sha');
+
+  // TODO Check chmod something
+  // throw new Error(`Unable to locate executable file: ${tool}. Please verify either the file path exists or the file can be found within a directory specified by the PATH environment variable. Also check the file mode to verify the file is executable.`);
+
   exec.getExecOutput('..\\scripts\\example.ps1 ')
   // Octokit.js
   // https://github.com/octokit/core.js#readme
